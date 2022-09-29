@@ -1,4 +1,5 @@
-from django.conf.urls import url
+from django.template.defaulttags import url
+from django.urls import path, re_path
 from django.contrib import admin
 
 from .views import index
@@ -6,5 +7,5 @@ from .views import index
 app_name = "test_paste"
 
 urlpatterns = [
-    url(r'^(?P<pk>\d+)?$', index, name="index"),
+    re_path(r'^(?P<pk>\d+)?$', index, name="index"),
 ]

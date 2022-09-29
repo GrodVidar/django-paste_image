@@ -105,7 +105,7 @@ class PasteImageWidget(FileInput):
             widget_vars.update(self.attrs)  # div_style
         return {"widget": widget_vars}
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None):
         template = self.template_name
         static_template = SINGLE_TEMPLATE
         try:
